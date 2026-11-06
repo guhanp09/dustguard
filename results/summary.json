@@ -1,0 +1,162 @@
+{
+  "inputs": {
+    "model": {
+      "pressure_pa": 101325.0,
+      "gas_constant_j_kg_k": 287.05,
+      "air_cp_j_kg_k": 1006.0,
+      "reference_ambient_c": 43.0,
+      "fan_shutoff_pa": 150.0,
+      "fan_free_flow_m3_s": 0.3,
+      "core_resistance_pa_s2_m6": 800.0,
+      "duct_resistance_pa_s2_m6": 100.0,
+      "pressure_fouling_coefficient": 1.5,
+      "ua_reference_w_k": 230.0,
+      "reference_flow_m3_s": 0.24,
+      "flow_exponent": 0.65,
+      "thermal_fouling_k_w": 0.003,
+      "fan_efficiency": 0.35
+    },
+    "study": {
+      "ambient_c": [
+        35.0,
+        43.0,
+        50.0
+      ],
+      "hot_side_c": 60.0,
+      "thermal_duty_w": 2500.0,
+      "scenarios": {
+        "clean": 0.0,
+        "mild": 0.2,
+        "moderate": 0.5,
+        "heavy": 1.0
+      },
+      "maintenance_heat_loss_fraction": 0.15,
+      "severity_points": 101,
+      "sensitivity_ambient_c": 43.0,
+      "sensitivity_severity": 0.5
+    },
+    "sensitivity": {
+      "fan_shutoff_pa": [
+        135.0,
+        165.0
+      ],
+      "core_resistance_pa_s2_m6": [
+        640.0,
+        960.0
+      ],
+      "ua_reference_w_k": [
+        184.0,
+        276.0
+      ],
+      "thermal_fouling_k_w": [
+        0.0015,
+        0.0045
+      ],
+      "pressure_fouling_coefficient": [
+        1.0,
+        2.0
+      ],
+      "flow_exponent": [
+        0.5,
+        0.8
+      ],
+      "fan_efficiency": [
+        0.25,
+        0.45
+      ]
+    },
+    "threshold_envelope": {
+      "pressure_fouling_coefficient": [
+        1.0,
+        2.0
+      ],
+      "thermal_fouling_k_w": [
+        0.0015,
+        0.0045
+      ],
+      "ua_reference_w_k": [
+        184.0,
+        276.0
+      ],
+      "flow_exponent": [
+        0.5,
+        0.8
+      ]
+    }
+  },
+  "reference_ambient_c": 43.0,
+  "clean": {
+    "ambient_c": 43.0,
+    "severity": 0,
+    "density_kg_m3": 1.1165183755977182,
+    "flow_m3_s": 0.24174688920761409,
+    "mass_flow_kg_s": 0.2699148440438868,
+    "core_pressure_pa": 46.75324675324675,
+    "duct_pressure_pa": 5.844155844155844,
+    "fan_pressure_pa": 52.597402597402585,
+    "pressure_balance_error_pa": -7.993605777301127e-15,
+    "hydraulic_power_w": 12.715258458322555,
+    "electrical_power_w": 36.32930988092159,
+    "ua_flow_w_k": 231.08678484550813,
+    "fouling_resistance_k_w": 0.0,
+    "ua_effective_w_k": 231.08678484550816,
+    "capacity_rate_w_k": 271.5343331081501,
+    "effectiveness": 0.573029672432044,
+    "conductance_w_k": 155.59722995501676,
+    "heat_rejection_w": 2645.152909235285,
+    "outlet_air_c": 52.741504431344744,
+    "required_hot_side_c": 59.067124078768956
+  },
+  "heavy": {
+    "ambient_c": 43.0,
+    "severity": 1,
+    "density_kg_m3": 1.1165183755977182,
+    "flow_m3_s": 0.1995570315713218,
+    "mass_flow_kg_s": 0.22280909272911475,
+    "core_pressure_pa": 79.64601769911505,
+    "duct_pressure_pa": 3.982300884955752,
+    "fan_pressure_pa": 83.6283185840708,
+    "pressure_balance_error_pa": -3.9968028886505635e-15,
+    "hydraulic_power_w": 16.688619011937973,
+    "electrical_power_w": 47.68176860553707,
+    "ua_flow_w_k": 204.00184806800473,
+    "fouling_resistance_k_w": 0.003,
+    "ua_effective_w_k": 126.55157967756122,
+    "capacity_rate_w_k": 224.14594728548946,
+    "effectiveness": 0.43140936346661807,
+    "conductance_w_k": 96.69866044205513,
+    "heat_rejection_w": 1643.8772275149372,
+    "outlet_air_c": 50.33395917893251,
+    "required_hot_side_c": 68.85351222624308
+  },
+  "heavy_airflow_loss_percent": 17.452078814573426,
+  "heavy_heat_loss_percent": 37.85322497707012,
+  "maximum_pressure_balance_error_pa": 2.008171406941983e-12,
+  "thresholds": [
+    {
+      "ambient_c": 35.0,
+      "nominal_severity": 0.28132405258277965,
+      "minimum_reached_severity": 0.17426413187139764,
+      "upper_severity": 0.6020995458869625,
+      "unreached_cases": 0,
+      "corner_cases": 16
+    },
+    {
+      "ambient_c": 43.0,
+      "nominal_severity": 0.2855235971241697,
+      "minimum_reached_severity": 0.17729471494770874,
+      "upper_severity": 0.6088311312789751,
+      "unreached_cases": 0,
+      "corner_cases": 16
+    },
+    {
+      "ambient_c": 50.0,
+      "nominal_severity": 0.2891468055560339,
+      "minimum_reached_severity": 0.17991272675437583,
+      "upper_severity": 0.6146202925713863,
+      "unreached_cases": 0,
+      "corner_cases": 16
+    }
+  ],
+  "physical_validation_performed": false
+}

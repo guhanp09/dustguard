@@ -1,0 +1,43 @@
+{
+  "model": {
+    "pressure_pa": 101325.0,
+    "gas_constant_j_kg_k": 287.05,
+    "air_cp_j_kg_k": 1006.0,
+    "reference_ambient_c": 43.0,
+    "fan_shutoff_pa": 150.0,
+    "fan_free_flow_m3_s": 0.30,
+    "core_resistance_pa_s2_m6": 800.0,
+    "duct_resistance_pa_s2_m6": 100.0,
+    "pressure_fouling_coefficient": 1.5,
+    "ua_reference_w_k": 230.0,
+    "reference_flow_m3_s": 0.24,
+    "flow_exponent": 0.65,
+    "thermal_fouling_k_w": 0.003,
+    "fan_efficiency": 0.35
+  },
+  "study": {
+    "ambient_c": [35.0, 43.0, 50.0],
+    "hot_side_c": 60.0,
+    "thermal_duty_w": 2500.0,
+    "scenarios": {"clean": 0.0, "mild": 0.2, "moderate": 0.5, "heavy": 1.0},
+    "maintenance_heat_loss_fraction": 0.15,
+    "severity_points": 101,
+    "sensitivity_ambient_c": 43.0,
+    "sensitivity_severity": 0.5
+  },
+  "sensitivity": {
+    "fan_shutoff_pa": [135.0, 165.0],
+    "core_resistance_pa_s2_m6": [640.0, 960.0],
+    "ua_reference_w_k": [184.0, 276.0],
+    "thermal_fouling_k_w": [0.0015, 0.0045],
+    "pressure_fouling_coefficient": [1.0, 2.0],
+    "flow_exponent": [0.5, 0.8],
+    "fan_efficiency": [0.25, 0.45]
+  },
+  "threshold_envelope": {
+    "pressure_fouling_coefficient": [1.0, 2.0],
+    "thermal_fouling_k_w": [0.0015, 0.0045],
+    "ua_reference_w_k": [184.0, 276.0],
+    "flow_exponent": [0.5, 0.8]
+  }
+}
